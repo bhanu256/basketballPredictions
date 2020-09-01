@@ -1,0 +1,54 @@
+.selectionDiv {
+    width: 100%;
+    height: 10%;
+    display: flex;
+}
+
+.selectDiv {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selections {
+    height: 30px;
+    width: 30%;
+    margin-top: 75px;
+    flex: none;
+}
+
+.buttonDiv {
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.detailsDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details {
+    width: 30%;
+    margin-left: 35%;
+    flex: none;
+}
+
+.lists {
+    width: 50%;
+    text-decoration: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+#predictBut {
+    width: 30%;
+    text-decoration: none;
+}
+
