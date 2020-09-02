@@ -30,6 +30,14 @@ class Regression:
     def uniqueTeams(self):
         return self.data.Team.unique().tolist()
 
+    def teamData(self, teamName, oppName):
+        details = self.calculation('', teamName, oppName)
+        return details
+        
+    def oppTeamData(self, teamName, oppName):
+        details = self.calculation("Opp.", teamName, oppName)
+        return details
+
     #Support functions
     def fileExists(self, name):
         if path.exists(name):
@@ -79,6 +87,18 @@ class Regression:
         y_pred = classifier.predict_proba(x_test)
 
         return y_pred[0]
+
+    def calculation(self, adds, homeTeam, awayTeam):
+        attributes = ['FieldGoals', 'FreeThrows', 'OffRebounds',
+         'TotalRebounds', 'Assists', 'Blocks', 'Turnovers']
+
+        details = {}
+        data = self.data[(self.data['Team'] == homeTeam) & (self.data['Opponent'] == awayTeam)]
+
+        for attr in attributes:
+            details[attr] = round(data[adds + attr].mean(), 2)
+
+        return details
 
 # obj = Regression()
 # print(obj.predict("ATL", "TOR"))

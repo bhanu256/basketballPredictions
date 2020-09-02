@@ -16,6 +16,8 @@
     width: 30%;
     margin-top: 75px;
     flex: none;
+    background-color: #202020;
+    font-family: sans-serif;
 }
 
 .buttonDiv {
@@ -32,12 +34,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    list-style-type: none;
 }
 
 .details {
     width: 30%;
     margin-left: 35%;
     flex: none;
+    list-style-type: none;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    font-style: italic;
 }
 
 .lists {
@@ -49,6 +58,24 @@
 
 #predictBut {
     width: 30%;
+    height: 50px;
     text-decoration: none;
+    font-size: large;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#prediction {
+    font-size: x-large;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+select {
+    color:whitesmoke;
 }
 

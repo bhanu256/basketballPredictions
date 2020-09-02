@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+body, html{
+    background-color: #202020;
+    overflow: hidden;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+p, li {
+    color: white;
+}

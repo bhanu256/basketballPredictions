@@ -1,0 +1,17 @@
+.code {
+    font-size: 5em;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    font-weight: bold;
+    font-family: cursive;
+    letter-spacing: 5px;
+}
+
+.page {
+    font-size: 6em;
+    margin-left: 5%;
+    margin-top: 5%;
+    font-weight: bold;
+    font-family: cursive;
+    letter-spacing: 5px;
+}

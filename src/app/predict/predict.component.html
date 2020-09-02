@@ -1,28 +1,40 @@
 <div class="selectionDiv">
     <div class="selectDiv">
-        <select class="selections">
-            <option>Player A</option>
+        <select class="selections" #teamName>
+            <option *ngFor="let name of allTeamNames">{{name}}</option>
         </select>
     </div>
 
     <div class="selectDiv">
-        <select class="selections">
-            <option>Player B</option>
+        <select class="selections" #oppTeamName>
+            <option *ngFor="let name of allTeamNames">{{name}}</option>
         </select>
     </div>
 </div>
 
 <div class="buttonDiv">
-    <button id="predictBut">Predict</button>
-    <p id="prediction">A winds by</p>
+    <button id="predictBut" (click)="getPredictionResults(teamName.value, oppTeamName.value)">Predict</button>
+    <p id="prediction">{{statement}} </p>
 </div>
 
-<div class="detailsDiv">
+<div class="detailsDiv" *ngIf="success">
     <ul class="lists">
-        <li class="details" *ngFor="let details of data">{{details}}</li>
+        <li class="details">Assists : {{teamData.Assists}}</li>
+        <li class="details">Block : {{teamData.Blocks}}</li>
+        <li class="details">Field Goals : {{teamData.FieldGoals}}</li>
+        <li class="details">Free Throws : {{teamData.FreeThrows}}</li>
+        <li class="details">OffRebounds : {{teamData.OffRebounds}}</li>
+        <li class="details">Total Rebounds : {{teamData.TotalRebounds}}</li>
+        <li class="details">Turnovers : {{teamData.Turnovers}}</li>
     </ul>
 
     <ul class="lists">
-        <li class="details" *ngFor="let details of data">{{details}}</li>
+        <li class="details">Assists : {{oppTeamData.Assists}}</li>
+        <li class="details">Blocks : {{oppTeamData.Blocks}}</li>
+        <li class="details">Field Goals : {{oppTeamData.FieldGoals}}</li>
+        <li class="details">Free Throws : {{oppTeamData.FreeThrows}}</li>
+        <li class="details">OffRebounds : {{oppTeamData.OffRebounds}}</li>
+        <li class="details">Total Rebounds : {{oppTeamData.TotalRebounds}}</li>
+        <li class="details">Turnovers : {{oppTeamData.Turnovers}}</li>
     </ul>
 </div>
